@@ -36,8 +36,8 @@ public class SimpleCapsuleWithStickMovement : MonoBehaviour
         if (PreCharacterMove != null) PreCharacterMove();
 
         if (HMDRotatesPlayer) RotatePlayerToHMD();
-		if (EnableLinearMovement) StickMovement();
-		if (EnableRotation) SnapTurn();
+		if (EnableLinearMovement && OVRInput.Get(OVRInput.RawButton.RIndexTrigger)) StickMovement();
+		if (EnableRotation && !OVRInput.Get(OVRInput.RawButton.RIndexTrigger)) SnapTurn();
 	}
 
     void RotatePlayerToHMD()
@@ -62,7 +62,8 @@ public class SimpleCapsuleWithStickMovement : MonoBehaviour
 		ort = Quaternion.Euler(ortEuler);
 
 		Vector3 moveDir = Vector3.zero;
-		Vector2 primaryAxis = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick);
+		//Vector2 primaryAxis = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick);
+		Vector2 primaryAxis = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick);
 		moveDir += ort * (primaryAxis.x * Vector3.right);
 		moveDir += ort * (primaryAxis.y * Vector3.forward);
 		//_rigidbody.MovePosition(_rigidbody.transform.position + moveDir * Speed * Time.fixedDeltaTime);
