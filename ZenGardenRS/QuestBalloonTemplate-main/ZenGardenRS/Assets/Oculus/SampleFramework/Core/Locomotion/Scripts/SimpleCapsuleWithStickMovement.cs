@@ -36,11 +36,11 @@ public class SimpleCapsuleWithStickMovement : MonoBehaviour
         if (PreCharacterMove != null) PreCharacterMove();
 
         if (HMDRotatesPlayer) RotatePlayerToHMD();
-		if (EnableLinearMovement && OVRInput.Get(OVRInput.RawButton.RIndexTrigger)) StickMovement();
-		if (EnableRotation && !OVRInput.Get(OVRInput.RawButton.RIndexTrigger)) SnapTurn();
+		if (EnableLinearMovement && OVRInput.Get(OVRInput.RawButton.RIndexTrigger)) StickMovement();  //
+		if (EnableRotation && !OVRInput.Get(OVRInput.RawButton.RIndexTrigger)) SnapTurn();  //Allows rotation
 	}
 
-    void RotatePlayerToHMD()
+    void RotatePlayerToHMD() //Rotates view with rotation of head
     {
 		Transform root = CameraRig.trackingSpace;
 		Transform centerEye = CameraRig.centerEyeAnchor;
@@ -54,7 +54,7 @@ public class SimpleCapsuleWithStickMovement : MonoBehaviour
 		root.rotation = prevRot;
     }
 
-	void StickMovement()
+	void StickMovement()  //Allows for linear movement with thumbstick
 	{
 		Quaternion ort = CameraRig.centerEyeAnchor.rotation;
 		Vector3 ortEuler = ort.eulerAngles;
@@ -70,7 +70,7 @@ public class SimpleCapsuleWithStickMovement : MonoBehaviour
 		_rigidbody.MovePosition(_rigidbody.position + moveDir * Speed * Time.fixedDeltaTime);
 	}
 
-	void SnapTurn()
+	void SnapTurn()  //Snap rotation using right thumbstick
 	{
 		if (OVRInput.Get(OVRInput.Button.SecondaryThumbstickLeft) ||
 			(RotationEitherThumbstick && OVRInput.Get(OVRInput.Button.PrimaryThumbstickLeft)))
