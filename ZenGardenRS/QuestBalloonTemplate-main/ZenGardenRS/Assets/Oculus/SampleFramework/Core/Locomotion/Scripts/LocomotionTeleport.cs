@@ -768,15 +768,17 @@ public class LocomotionTeleport : MonoBehaviour
 	/// </summary>
 	public void DoTeleport()
 	{
+		// Get the character controller and its transform
 		var character = LocomotionController.CharacterController;
 		var characterTransform = character.transform;
+		//Get the destination transform
 		var destTransform = _teleportDestination.OrientationIndicator;
-
+		// Calculate the destination position
 		Vector3 destPosition = destTransform.position;
-		destPosition.y += character.height * 0.5f;
+		destPosition.y += character.height * 0.5f;  // Adjust for character height
 		Quaternion destRotation = _teleportDestination.LandingRotation;// destTransform.rotation;
 #if false
-		Quaternion destRotation = destTransform.rotation;
+		Quaternion destRotation = destTransform.rotation;  
 
 		//Debug.Log("Rots: " + destRotation + " " + destTransform.rotation * Quaternion.Euler(0, -LocomotionController.CameraRig.trackingSpace.localEulerAngles.y, 0));
 
@@ -786,7 +788,7 @@ public class LocomotionTeleport : MonoBehaviour
 		{
 			Teleported(characterTransform, destPosition, destRotation);
 		}
-
+		// Set the character's position and rotation to the destination
 		characterTransform.position = destPosition;
 		characterTransform.rotation = destRotation;
 	}
