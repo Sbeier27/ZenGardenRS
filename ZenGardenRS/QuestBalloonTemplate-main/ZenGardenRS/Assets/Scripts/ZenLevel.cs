@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class ZenLevel : MonoBehaviour
 {
+    public UnityEngine.UI.Text LevelOZen;
+    public int counter = 0;
+    public int zenLevel;
+    public UnityEngine.UI.Text Congrats;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +17,11 @@ public class ZenLevel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
+
+
+    
+
+
+
+}
 }
