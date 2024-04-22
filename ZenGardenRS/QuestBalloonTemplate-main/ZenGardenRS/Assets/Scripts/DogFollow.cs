@@ -13,6 +13,9 @@ public class DogFollow : MonoBehaviour
     public int zenLevel;
     public UnityEngine.UI.Text Congrats;
 
+    public AudioSource source;
+    public AudioClip clip;
+
     // Update is called once per frame
     void Start()
     {
@@ -50,6 +53,7 @@ public class DogFollow : MonoBehaviour
 
         gameObject.GetComponent<Animator>().Play("DogPet");
         counter++;
+        source.PlayOneShot(clip);
         if (collision.gameObject.tag == "Treat") 
         {
             gameObject.GetComponent<Animator>().Play("DogEat");

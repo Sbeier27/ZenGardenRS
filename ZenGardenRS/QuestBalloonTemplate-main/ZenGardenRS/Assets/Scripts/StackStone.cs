@@ -8,6 +8,8 @@ public class StackStone : OVRGrabbable
     public int counter = 0;
     public int zenLevel;
     public UnityEngine.UI.Text Congrats;
+    public AudioSource source;
+    public AudioClip clip;
 
 
 
@@ -30,6 +32,7 @@ public class StackStone : OVRGrabbable
         // Access the Rigidbody component of the grabbed object correctly
         Rigidbody rb = grabbedRigidbody;
         counter++;
+        source.PlayOneShot(clip);
         if (counter == 8)
         {
             Congrats.text = "Your Soul Feels , you've gained a zen level";

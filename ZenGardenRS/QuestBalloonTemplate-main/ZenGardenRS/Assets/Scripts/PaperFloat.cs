@@ -31,6 +31,8 @@ public class PaperFloat : OVRGrabbable
     public Rigidbody rb;
 
     public UnityEngine.UI.Text Counter;
+    public AudioSource source;
+    public AudioClip clip;
 
 
     // You need to override the GrabEnd method with the correct signature
@@ -45,7 +47,8 @@ public class PaperFloat : OVRGrabbable
             rb.AddForce(Vector3.up * 1f, ForceMode.VelocityChange); // Using ForceMode.VelocityChange to ensure consistent behavior
             light.intensity = 3f;
             counter++;
-            
+
+            source.PlayOneShot(clip);
             if (counter == 10)
             {
                 Congrats.text = "Your Heart Feels lighter, you've gained a zen level";
