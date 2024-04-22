@@ -27,4 +27,10 @@ public class FountainSound : MonoBehaviour
 
     }
 
+
+    public void OnCollisionExit(Collision collision) 
+    { 
+        source.Stop();
+    }
+
 }

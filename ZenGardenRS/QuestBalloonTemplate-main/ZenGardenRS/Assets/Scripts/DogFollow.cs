@@ -73,6 +73,11 @@ public class DogFollow : MonoBehaviour
 
     }
 
+    public void OnCollisionExit(Collision collision)
+    {
+        source.Stop();
+    }
+
 
 
 
