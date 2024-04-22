@@ -36,8 +36,8 @@ public class SimpleCapsuleWithStickMovement : MonoBehaviour
         if (PreCharacterMove != null) PreCharacterMove();
 
         if (HMDRotatesPlayer) RotatePlayerToHMD();
-		if (EnableLinearMovement && OVRInput.Get(OVRInput.RawButton.RIndexTrigger)) StickMovement();  //calls StickMovement method which Allows linear movement when right trigger pressed in conjunction with right thumbstick 
-		if (EnableRotation && !OVRInput.Get(OVRInput.RawButton.RIndexTrigger)) SnapTurn();  //Allows rotation when trigger not pressed and moving right thumbstick by calling SnapTurn method
+		if (EnableLinearMovement) StickMovement();  //calls StickMovement method which Allows linear movement when right trigger pressed in conjunction with right thumbstick 
+		if (EnableRotation) SnapTurn();  //Allows rotation when trigger not pressed and moving right thumbstick by calling SnapTurn method
 	}
 
     void RotatePlayerToHMD() //Rotates view with rotation of head

@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/TeleportMovement.unity
     guid: 099150150c4db054083fb1dbb6d1652c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/BaseScene.unity
     guid: ec13c5db5b5a4b940b7b5c664867239d
   - enabled: 1
