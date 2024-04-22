@@ -7,11 +7,12 @@ public class DogFollow : MonoBehaviour
     public GameObject Player;
     public float Dis;
     public Transform target;
+    public Animator animator;
 
     // Update is called once per frame
     void Start()
     {
-        gameObject.GetComponent<Animator>();
+        gameObject.GetComponent<Animator>(); 
 
     }
     
@@ -30,14 +31,28 @@ public class DogFollow : MonoBehaviour
             if (target != null)
             {
                 transform.LookAt(target);
+                
             }
 
 
         }
+
         
+
     }
 
-    
+    public void OnCollisionEnter(Collision collision)
+    {
+
+        gameObject.GetComponent<Animator>().Play("DogPet");
+
+
+
+
+
+    }
+
+
 
 
 }
