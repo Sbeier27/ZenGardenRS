@@ -45,7 +45,7 @@ public class PaperFloat : OVRGrabbable
         {
             rb.useGravity = false;
             rb.AddForce(Vector3.up * 1f, ForceMode.VelocityChange); // Using ForceMode.VelocityChange to ensure consistent behavior
-            light.intensity = 3f;
+            light.intensity = 10;
             counter++;
 
             source.PlayOneShot(clip);
