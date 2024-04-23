@@ -18,9 +18,14 @@ public class PaperFloat : MonoBehaviour
 }
 */
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PaperFloat : OVRGrabbable
 {
+    public Light light;
+    public ScoreKeeper scoreKeeper;
+    public Text Zenscore;
+    public Text Score;
     // You need to override the GrabEnd method with the correct signature
     public override void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity)
     {
@@ -32,6 +37,9 @@ public class PaperFloat : OVRGrabbable
         {
             rb.useGravity = false;
             rb.AddForce(Vector3.up * 1f, ForceMode.VelocityChange); // Using ForceMode.VelocityChange to ensure consistent behavior
+            light.intensity = 3f;
+            scoreKeeper.IncrementZenScore();
         }
+        
     }
 }

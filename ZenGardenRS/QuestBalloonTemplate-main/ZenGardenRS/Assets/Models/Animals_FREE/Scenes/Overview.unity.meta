@@ -1,9 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
+=======
 <<<<<<<< HEAD:ZenGardenRS/QuestBalloonTemplate-main/ZenGardenRS/Assets/Scenes/StartScreen.unity.meta
-guid: 31283aab81020e44585b578d8f706918
+guid: 48e23c4af8a2fb547b6fe1eefd28ca37
 ========
+>>>>>>> Stashed changes
 guid: 6ee0a178300a1a04096c14f3bc1903cd
->>>>>>>> Stone:ZenGardenRS/QuestBalloonTemplate-main/ZenGardenRS/Assets/Models/Animals_FREE/Scenes/Overview.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
