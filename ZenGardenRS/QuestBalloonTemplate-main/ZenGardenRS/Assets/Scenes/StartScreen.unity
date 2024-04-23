@@ -2968,7 +2968,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "How to Achieve Zen\nEarn 1 Level for each of following:\n\t- move 9 rocks\n\t-
-    light all 10 lanterns\n\t- pet and feed dog\n\nLevel 3 Zen achieves enlightenment"
+    light 1 lantern\n\t- pet and feed dog\n\nLevel 3 Zen achieves enlightenment"
 --- !u!222 &2130077293
 CanvasRenderer:
   m_ObjectHideFlags: 0
