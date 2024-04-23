@@ -9,7 +9,7 @@ public class DogFollow : MonoBehaviour
     public Transform target;
     public Animator animator;
     public UnityEngine.UI.Text petFed;
-    public int counter = 0;
+    public UnityEngine.UI.Text counter;
     public int zenLevel;
     public UnityEngine.UI.Text Congrats;
 
@@ -52,18 +52,17 @@ public class DogFollow : MonoBehaviour
     {
 
         gameObject.GetComponent<Animator>().Play("DogPet");
-        counter++;
+        counter.text = (int.Parse(counter.text) + 1).ToString();
         source.PlayOneShot(clip);
         if (collision.gameObject.tag == "Treat") 
         {
             gameObject.GetComponent<Animator>().Play("DogEat");
-            counter++;
-            if (counter == 2) 
+            counter.text = (int.Parse(counter.text) + 1).ToString();
+            if (int.Parse(counter.text) == 2) 
             {
                 Congrats.text = "Good job! you've gained a Zen Level";
                 zenLevel++;
-                counter--;
-                counter--;
+                counter.text = (int.Parse(counter.text) - 2).ToString();
             }
         }
 
