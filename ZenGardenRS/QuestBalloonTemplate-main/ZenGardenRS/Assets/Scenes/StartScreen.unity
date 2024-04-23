@@ -807,9 +807,21 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "To grab objects use the bottom two triggers \nUse this area to practice
-    movement and teloportation\nYou can also pickup the objects around to practice
-    interaction!"
+  m_Text: 'Controls:
+
+    L Hand Trigger - Aim teleport
+
+    L Index Trigger - Activate
+    teleport
+
+    L Stick - movement
+
+    R Stick - rotate
+
+    R Hand Trigger -
+    pick up objects
+
+'
 --- !u!222 &321876693
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2955,21 +2967,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Controls:
-
-    Click a button by aiming the controller and pressing any
-    button!
-
-    Hold the left thumbstick to aim your teleport, and release to teleport!
-
-    Right
-    thumbstick allows you to rotate
-
-    When holding the right index button you
-    can now use the right thumbstick to walk
-
-    To grab objects use the bottom
-    two triggers '
+  m_Text: "How to Achieve Zen\nEarn 1 Level for each of following:\n\t- move 9 rocks\n\t-
+    light all 10 lanterns\n\t- pet and feed dog\n\nLevel 3 Zen achieves enlightenment"
 --- !u!222 &2130077293
 CanvasRenderer:
   m_ObjectHideFlags: 0
