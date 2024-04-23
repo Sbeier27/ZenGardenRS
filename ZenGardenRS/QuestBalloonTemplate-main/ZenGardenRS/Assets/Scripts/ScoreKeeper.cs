@@ -15,7 +15,7 @@ public class ScoreKeeper : MonoBehaviour
     {
         score += 1;
         
-        if (ZenScore == 1)
+        if (ZenScore == 1) //
         {
             LoadScene("EndScreen");
         }
