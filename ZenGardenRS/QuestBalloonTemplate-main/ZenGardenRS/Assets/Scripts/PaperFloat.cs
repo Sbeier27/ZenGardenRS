@@ -31,6 +31,15 @@ public class PaperFloat : OVRGrabbable
     {
         base.GrabEnd(linearVelocity, angularVelocity);
 
+        /*
+ *         Rigidbody rb = gameObject.GetComponent<Rigidbody>();
+rb.isKinematic = m_grabbedKinematic;
+rb.velocity = linearVelocity;
+rb.angularVelocity = angularVelocity;
+m_grabbedBy = null;
+m_grabbedCollider = null;
+*/
+
         // Access the Rigidbody component of the grabbed object correctly
         Rigidbody rb = grabbedRigidbody;
         if (rb != null)
