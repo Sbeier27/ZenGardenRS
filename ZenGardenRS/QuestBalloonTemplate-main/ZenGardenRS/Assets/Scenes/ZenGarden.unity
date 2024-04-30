@@ -3053,6 +3053,7 @@ MonoBehaviour:
   m_grabPoints: []
   light: {fileID: 536353841}
   scoreKeeper: {fileID: 1948334646}
+  message: {fileID: 1425042093}
 --- !u!54 &536353840
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4735,6 +4736,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4754983667399276, guid: 1499c673ad068e74e90b288302fa8b6b, type: 3}
   m_PrefabInstance: {fileID: 210469261}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &658854259 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4926590347613244915, guid: 522b89d0f09cc834db5f015f40e578f3, type: 3}
+  m_PrefabInstance: {fileID: 926325893}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &662860213
 GameObject:
   m_ObjectHideFlags: 0
@@ -4921,6 +4927,7 @@ MonoBehaviour:
   m_grabPoints: []
   light: {fileID: 688322808}
   scoreKeeper: {fileID: 1948334646}
+  message: {fileID: 1425042093}
 --- !u!136 &688322805
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5685,6 +5692,7 @@ MonoBehaviour:
   m_grabPoints: []
   light: {fileID: 829498146}
   scoreKeeper: {fileID: 1948334646}
+  message: {fileID: 1425042093}
 --- !u!54 &829498145
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6093,6 +6101,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1201314685653236908, guid: 522b89d0f09cc834db5f015f40e578f3, type: 3}
+      propertyPath: m_player
+      value: 
+      objectReference: {fileID: 926325896}
+    - target: {fileID: 1201314685653236908, guid: 522b89d0f09cc834db5f015f40e578f3, type: 3}
+      propertyPath: m_controller
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1201314685653236908, guid: 522b89d0f09cc834db5f015f40e578f3, type: 3}
+      propertyPath: m_parentTransform
+      value: 
+      objectReference: {fileID: 658854259}
     - target: {fileID: 4926590347846174689, guid: 522b89d0f09cc834db5f015f40e578f3, type: 3}
       propertyPath: m_UseGravity
       value: 1
@@ -6264,6 +6284,16 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 4926590347321325546, guid: 522b89d0f09cc834db5f015f40e578f3, type: 3}
   m_PrefabInstance: {fileID: 926325893}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &926325895 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4926590347846174690, guid: 522b89d0f09cc834db5f015f40e578f3, type: 3}
+  m_PrefabInstance: {fileID: 926325893}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &926325896 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4926590347846174712, guid: 522b89d0f09cc834db5f015f40e578f3, type: 3}
+  m_PrefabInstance: {fileID: 926325893}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &934755045
 GameObject:
   m_ObjectHideFlags: 0
@@ -6336,6 +6366,7 @@ MonoBehaviour:
   m_grabPoints: []
   light: {fileID: 934755052}
   scoreKeeper: {fileID: 1948334646}
+  message: {fileID: 1425042093}
 --- !u!136 &934755049
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6579,13 +6610,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eee867db72679654587efe24c205f04c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
+  Player: {fileID: 926325896}
   Dis: 0
-  target: {fileID: 0}
+  target: {fileID: 926325895}
   animator: {fileID: 956605192}
   petFed: {fileID: 1425042093}
-  Zenscore: {fileID: 49747928}
-  Score: {fileID: 869957980}
+  message: {fileID: 1425042093}
   source: {fileID: 956605194}
   clip: {fileID: 8300000, guid: 484af94abc6ca594d81a8ec7838743a5, type: 3}
   scoreKeeper: {fileID: 1948334646}
@@ -9036,6 +9066,7 @@ MonoBehaviour:
   m_grabPoints: []
   light: {fileID: 1337202294}
   scoreKeeper: {fileID: 1948334646}
+  message: {fileID: 1425042093}
 --- !u!54 &1337202293
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9936,6 +9967,7 @@ MonoBehaviour:
   m_grabPoints: []
   light: {fileID: 1549916594}
   scoreKeeper: {fileID: 1948334646}
+  message: {fileID: 1425042093}
 --- !u!54 &1549916593
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11692,6 +11724,7 @@ MonoBehaviour:
   m_grabPoints: []
   light: {fileID: 1745666799}
   scoreKeeper: {fileID: 1948334646}
+  message: {fileID: 1425042093}
 --- !u!136 &1745666796
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12180,6 +12213,7 @@ MonoBehaviour:
   m_grabPoints: []
   light: {fileID: 1786908775}
   scoreKeeper: {fileID: 1948334646}
+  message: {fileID: 1425042093}
 --- !u!54 &1786908774
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13747,6 +13781,7 @@ MonoBehaviour:
   m_grabPoints: []
   light: {fileID: 2108134165}
   scoreKeeper: {fileID: 1948334646}
+  message: {fileID: 1425042093}
 --- !u!136 &2108134162
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14183,6 +14218,7 @@ MonoBehaviour:
   m_grabPoints: []
   light: {fileID: 2121855482}
   scoreKeeper: {fileID: 1948334646}
+  message: {fileID: 1425042093}
 --- !u!54 &2121855481
 Rigidbody:
   m_ObjectHideFlags: 0
