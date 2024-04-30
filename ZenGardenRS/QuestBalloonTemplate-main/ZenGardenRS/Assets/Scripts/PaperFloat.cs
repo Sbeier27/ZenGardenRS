@@ -28,11 +28,11 @@ public class PaperFloat : OVRGrabbable
 
     // Access the Rigidbody component of the grabbed object correctly
     void OnCollisionEnter(Collision collision){
-        Rigidbody rb = grabbedRigidbody;
+        grabbedRigidbody.GetComponent<Rigidbody>();
         if (collision.gameObject.name == "CustomHandRight")
         {
-            rb.useGravity = false;
-            rb.AddForce(Vector3.up * 1f, ForceMode.VelocityChange); // Using ForceMode.VelocityChange to ensure consistent behavior
+            grabbedRigidbody.useGravity = false;
+            grabbedRigidbody.AddForce(Vector3.up * 1f, ForceMode.VelocityChange); // Using ForceMode.VelocityChange to ensure consistent behavior
             light.intensity = 3f;
             scoreKeeper.IncrementZenScore();
         }

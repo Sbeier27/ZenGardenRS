@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3053,8 +3053,6 @@ MonoBehaviour:
   m_grabPoints: []
   light: {fileID: 536353841}
   scoreKeeper: {fileID: 1948334646}
-  Zenscore: {fileID: 49747928}
-  Score: {fileID: 869957980}
 --- !u!54 &536353840
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4923,8 +4921,6 @@ MonoBehaviour:
   m_grabPoints: []
   light: {fileID: 688322808}
   scoreKeeper: {fileID: 1948334646}
-  Zenscore: {fileID: 49747928}
-  Score: {fileID: 869957980}
 --- !u!136 &688322805
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5689,8 +5685,6 @@ MonoBehaviour:
   m_grabPoints: []
   light: {fileID: 829498146}
   scoreKeeper: {fileID: 1948334646}
-  Zenscore: {fileID: 49747928}
-  Score: {fileID: 869957980}
 --- !u!54 &829498145
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6342,8 +6336,6 @@ MonoBehaviour:
   m_grabPoints: []
   light: {fileID: 934755052}
   scoreKeeper: {fileID: 1948334646}
-  Zenscore: {fileID: 49747928}
-  Score: {fileID: 869957980}
 --- !u!136 &934755049
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6634,8 +6626,8 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!65 &956605193
-BoxCollider:
+--- !u!64 &956605193
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -6644,9 +6636,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.99, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0.1}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4161201889706389872, guid: 1299dfd772c05bf4eb2437d163771001, type: 3}
 --- !u!82 &956605194
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9043,8 +9036,6 @@ MonoBehaviour:
   m_grabPoints: []
   light: {fileID: 1337202294}
   scoreKeeper: {fileID: 1948334646}
-  Zenscore: {fileID: 49747928}
-  Score: {fileID: 869957980}
 --- !u!54 &1337202293
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9945,8 +9936,6 @@ MonoBehaviour:
   m_grabPoints: []
   light: {fileID: 1549916594}
   scoreKeeper: {fileID: 1948334646}
-  Zenscore: {fileID: 49747928}
-  Score: {fileID: 869957980}
 --- !u!54 &1549916593
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11703,8 +11692,6 @@ MonoBehaviour:
   m_grabPoints: []
   light: {fileID: 1745666799}
   scoreKeeper: {fileID: 1948334646}
-  Zenscore: {fileID: 49747928}
-  Score: {fileID: 869957980}
 --- !u!136 &1745666796
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12193,8 +12180,6 @@ MonoBehaviour:
   m_grabPoints: []
   light: {fileID: 1786908775}
   scoreKeeper: {fileID: 1948334646}
-  Zenscore: {fileID: 49747928}
-  Score: {fileID: 869957980}
 --- !u!54 &1786908774
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13762,8 +13747,6 @@ MonoBehaviour:
   m_grabPoints: []
   light: {fileID: 2108134165}
   scoreKeeper: {fileID: 1948334646}
-  Zenscore: {fileID: 49747928}
-  Score: {fileID: 869957980}
 --- !u!136 &2108134162
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -14200,8 +14183,6 @@ MonoBehaviour:
   m_grabPoints: []
   light: {fileID: 2121855482}
   scoreKeeper: {fileID: 1948334646}
-  Zenscore: {fileID: 49747928}
-  Score: {fileID: 869957980}
 --- !u!54 &2121855481
 Rigidbody:
   m_ObjectHideFlags: 0
