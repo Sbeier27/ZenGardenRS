@@ -77,18 +77,20 @@ public class DogFollow : MonoBehaviour
         if (collision.gameObject.name == "CustomHandRight")
         {
 
-            scoreKeeper.IncrementZenScore();
+            //
             //counter.text = (int.Parse(counter.text) + 1).ToString();
             source.PlayOneShot(clip);
-            message.text = "Having a good day";
+            message.text = "good day";
 
-            Invoke("ClearText:", 1.5f);
+            Invoke("ClearText:", 2f);
+            
         }
 
     }
         public void ClearText()          //clears the text UI so that it's blank
         {
             message.text = "";
+            scoreKeeper.IncrementZenScore();
         }
 }
 

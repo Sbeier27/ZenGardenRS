@@ -19,9 +19,7 @@ public class ScoreKeeper : MonoBehaviour
         {
             LoadScene("EndScreen");
         }
-        if (score > 0 && score % 9 == 0) {
-            ZenScore += 1;
-        }
+        
         UpdateScoreDisplay();
     }
 
@@ -29,7 +27,7 @@ public class ScoreKeeper : MonoBehaviour
     {
         ZenScore += 1;
         UpdateScoreDisplay();
-        if (ZenScore == 3)
+        if (ZenScore == 10)
         {
             LoadScene("EndScreen");
         }
