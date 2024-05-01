@@ -4,27 +4,29 @@ using UnityEngine;
 
 public class DogFollow : MonoBehaviour
 {
-    public GameObject Player;
-    public float Dis;
-    public Transform target;
-    public Animator animator;
-    public UnityEngine.UI.Text petFed;
-    public UnityEngine.UI.Text message;
+    public GameObject Player; //defines a player in the inspector to follow
+    public float Dis;  //a float to track the distance of the dog and player
+    public Transform target; // defines a target to look at
+    public Animator animator; //gathers an animator
+    public UnityEngine.UI.Text petFed; //defines a specific part of the UI to use
+    public UnityEngine.UI.Text message; // defines a specific part of the UI to use
     //public UnityEngine.UI.Text counter;
     //public int zenLevel;
     //public UnityEngine.UI.Text Congrats;
     //public Text Zenscore;
     //public Text Score;
 
-    public AudioSource source;
-    public AudioClip clip;
-    public ScoreKeeper scoreKeeper;
+    public AudioSource source; //defines an audio source in the inspector
+    public AudioClip clip; //defines a specific audio clip
+    public ScoreKeeper scoreKeeper; //defines a specifc UI element 
 
     // Update is called once per frame
     void Start()
     {
 
-        animator = gameObject.GetComponent<Animator>();
+        animator = gameObject.GetComponent<Animator>(); /*at the start of the scene it gets the Animator
+                                                        * of the object and sets it to the animator 
+                                                        * variable */
 
     }
 
@@ -35,12 +37,14 @@ public class DogFollow : MonoBehaviour
     void Update()
     {
         Dis = Vector3.Distance(transform.position, Player.transform.position);
+        //defines the distance between the dog and the player
 
-        if (Dis >= 5)
+        if (Dis >= 5)  /*if the distance is greater or equal to 5, the dog moves towards the player while playing the dog 
+                        * walk animation */
         {
             transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, 5 * Time.deltaTime);
             gameObject.GetComponent<Animator>().Play("DogWalk");
-            if (target != null)
+            if (target != null)    //if there is a target, the dog turns to look at them
             {
                 transform.LookAt(target);
 
@@ -53,7 +57,10 @@ public class DogFollow : MonoBehaviour
 
     }
 
-    public void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision)               /* defines a collision enter where if the CustomHandRight 
+                                                                     * object collides with the dog object, it plays the dog 
+                                                                     * pet animation and plays a short barking sound*/
+                                                                     
     {
         if (collision.gameObject.name == "CustomHandRight")
         {
@@ -62,11 +69,14 @@ public class DogFollow : MonoBehaviour
 
         }
     }
-    public void OnCollisionExit(Collision collision)
+    public void OnCollisionExit(Collision collision)                 /*defines a collision exit for CustomHandRight that 
+                                                                      * increases the scoreKeeper while displaying the message
+                                                                      *Having a good day before clearing the text */
+                                                                      
     {
         if (collision.gameObject.name == "CustomHandRight")
         {
-            gameObject.GetComponent<Animator>().Play("DogPet");
+
             scoreKeeper.IncrementZenScore();
             //counter.text = (int.Parse(counter.text) + 1).ToString();
             source.PlayOneShot(clip);
@@ -76,7 +86,7 @@ public class DogFollow : MonoBehaviour
         }
 
     }
-        public void ClearText()
+        public void ClearText()          //clears the text UI so that it's blank
         {
             message.text = "";
         }

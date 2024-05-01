@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Streamer : OVRGrabber
+public class Streamer : MonoBehaviour
 {
-    public ParticleSystem system;
+    public ParticleSystem system;  //defines a particle system to be used in the inspector
     [SerializeField]
-    private OVRInput.Controller m_controller = OVRInput.Controller.None;
+    private OVRInput.Controller m_controller = OVRInput.Controller.None; //defines a controller to be used in the inspector
 
 
-    public void confetti()
+    public void update()
     {
 
-        if (OVRInput.GetDown(OVRInput.Button.Two))
+        if (OVRInput.Get(OVRInput.RawButton.LIndexTrigger)) /*checks every frame to see if the Left Index trigger has been
+                                                             * pressed down and if so plays the particle effect */
         {
             system.Play();
         }

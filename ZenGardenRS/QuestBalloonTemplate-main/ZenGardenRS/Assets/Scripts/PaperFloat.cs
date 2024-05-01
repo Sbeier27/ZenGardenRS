@@ -35,19 +35,18 @@ public class PaperFloat : OVRGrabbable
         base.GrabEnd(linearVelocity,angularVelocity);
         // Access the Rigidbody component of the grabbed object correctly
         Rigidbody rb = grabbedRigidbody;
-        void OnCollisionEnter(Collision collision)
+
+        if (rb != null)
         {
-            if (rb != null)
-            {
-                rb.useGravity = false;
-                rb.AddForce(Vector3.up * 1f, ForceMode.VelocityChange); // Using ForceMode.VelocityChange to ensure consistent behavior
-                light.intensity = 3f;
-                scoreKeeper.IncrementZenScore();
-                message.text = "Peace";
-                Invoke("ClearText", 1.5f);
-            }
+            rb.useGravity = false;
+            rb.AddForce(Vector3.up * 1f, ForceMode.VelocityChange); // Using ForceMode.VelocityChange to ensure consistent behavior
+            light.intensity = 3f;
+            scoreKeeper.IncrementZenScore();
+            message.text = "Peace";
+            Invoke("ClearText", 1.5f);
         }
     }
+
 
     public void ClearText()
     {
